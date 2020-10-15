@@ -58,14 +58,7 @@ public interface Headers {
     HeaderKey<String> sendFrom = HeaderKey.of("send-from", null);
     HeaderKey<String> replyFrom = HeaderKey.of("reply-from", null);
 
-    //设备上报属性信息
-    /**
-     * @see org.jetlinks.core.message.property.ReportPropertyMessage
-     */
-    @Deprecated
-    HeaderKey<Boolean> reportProperties = HeaderKey.of("report-properties", false);
+    //是否使用时间戳作为数据ID
+    HeaderKey<Boolean> useTimestampAsId = HeaderKey.of("useTimestampId", false);
 
-    //上报派生属性
-    @Deprecated
-    HeaderKey<Boolean> reportDerivedMetadata = HeaderKey.of("derived-metadata", false);
 }
